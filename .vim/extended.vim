@@ -18,7 +18,7 @@ set background=light
 " this for two firewatch
 " colorscheme tender
 " colorscheme iceberg
-colorscheme archery
+colorscheme molokai
 
 " colorscheme sierra
 " colorscheme onedark

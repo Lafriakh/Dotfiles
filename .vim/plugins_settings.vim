@@ -35,7 +35,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor|tmp|target|dist)|(\.(swp
 """"""""""""""""""""""""""""""
 " => airline
 """"""""""""""""""""""""""""""
-let g:airline_theme = 'archery' " 'wombat' "'powerlineish'
+let g:airline_theme = 'molokai' " 'archery' 'wombat' "'powerlineish'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 " just show the filename (no path) in the tab
@@ -158,3 +158,11 @@ let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
                             \ '*vendor/*/test*', '*vendor/*/Test*',
                             \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
                             \ '*var/cache*', '*var/log*']
+
+""""""""""""""""""""""""""""""
+" => ag
+""""""""""""""""""""""""""""""
+" install this package first: `sudo apt install ack-grep` 
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep --smart-case' 
+endif

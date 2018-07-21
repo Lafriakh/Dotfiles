@@ -22,8 +22,9 @@ Plug 'tacahiroy/ctrlp-funky'
 Plug 'elzr/vim-json', {'for' : 'json'}
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
-" Plug 'roxma/vim-hug-neovim-rpc'
-" Plug 'roxma/nvim-completion-manager'
+" Plug 'itchyny/lightline.vim'
+" Plug 'bling/vim-bufferline'
+Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

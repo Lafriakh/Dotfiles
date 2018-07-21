@@ -123,4 +123,8 @@ if !has('gui_running')
     augroup END
 endif
 
+" Show the functions in the current buffer.
 nnoremap <Leader>fu :CtrlPFunky<Cr>
+
+" Show the opened buffers.
+nnoremap <Leader>, :CtrlPBuffer<CR>
