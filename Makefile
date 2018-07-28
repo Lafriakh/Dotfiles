@@ -4,6 +4,8 @@ sync:
 	rsync -r ~/.bash_aliases ~/.dotfiles/.bash_aliases
 	rsync -r ~/.vimrc ~/.dotfiles/.vimrc
 	rsync -r ~/.vim ~/.dotfiles --exclude=.git --exclude=plugged --exclude=gutentags
-
-# TODO
-# restore:
+restore:
+	rsync -r ~/.dotfiles/.bashrc ~/.bashrc
+	rsync -r ~/.dotfiles/.bash_aliases ~/.bash_aliases
+	rsync -r ~/.dotfiles/.vim/ ~/.vim/
+	rsync -r ~/.dotfiles/.vimrc ~/.vimrc
