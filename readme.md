@@ -1,4 +1,4 @@
-<p align="center">Lafriakh .dotfiles</p>
+<p align="center"><h1>Lafriakh .dotfiles</h1></p>
 
 ## Installation
 
