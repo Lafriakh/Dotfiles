@@ -11,3 +11,7 @@ function gitp() {
     
     git push
 }
+
+function config-reload() {
+    source ~/.zshrc
+}

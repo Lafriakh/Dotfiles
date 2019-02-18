@@ -64,8 +64,6 @@ Plug 'jwalton512/vim-blade'
 
 " Color
 Plug 'fatih/molokai'
-Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'tomasiser/vim-code-dark'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()

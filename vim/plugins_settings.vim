@@ -3,7 +3,7 @@
 """""""""""""""""""""""""""""""""""""
 "" NERDTree configuration
 let g:NERDTreeWinSize=40
-noremap <Leader>e :NERDTreeToggle<cr>
+noremap <Leader>n :NERDTreeToggle<cr>
 noremap <Leader>f :NERDTreeFind<cr>
 let NERDTreeQuitOnOpen=1
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -37,13 +37,13 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor|tmp|target|dist)|(\.(swp
 " => lightline
 """"""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'molokai',
+      \ 'colorscheme': 'solarized',
       \ }
 
 """"""""""""""""""""""""""""""
 " => airline
 """"""""""""""""""""""""""""""
-let g:airline_theme = 'molokai'
+let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 " just show the filename (no path) in the tab

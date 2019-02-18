@@ -3,5 +3,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme
 syntax enable
-set background=dark
-colorscheme molokai
+set background=light
+colorscheme solarized

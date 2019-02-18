@@ -43,7 +43,7 @@ noremap j gj
 noremap k gk
 
 " Exit on jk
-imap jk <Esc>
+imap jj <Esc>
 
 " Source (reload configuration)
 " nnoremap <silent> <F5> :source $MYNVIMRC<CR>
