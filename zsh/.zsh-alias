@@ -1,0 +1,2 @@
+alias time="/usr/bin/time -p"
+alias ll="ls -l --group-directories-first"
