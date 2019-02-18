@@ -1,2 +1,8 @@
+# Git
+alias ga="git add ."
+alias gs="git status"
+alias gc="git commit -m"
+
+# General
 alias time="/usr/bin/time -p"
 alias ll="ls -l --group-directories-first"
