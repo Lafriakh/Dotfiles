@@ -1,5 +1,7 @@
 # Lafriakh .dotfiles
 
+You will find here all of my dotfiles like `zsh`, `vim` and also `VSCode` and many more.
+
 ## Installation
 
 You need to clone this package to your home directory by executing this command:
