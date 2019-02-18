@@ -1,8 +1,8 @@
 # Git: add, commit, push in one command.
-function gitall() {
+function rachid() {
     git add .
     
-    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    if [ "$1" != "" ]
     then
         git commit -m "$1"
     else
