@@ -18,3 +18,9 @@ Include this code to your `.zshrc` file:
 Vim is an awesome text-editor to use my setup just include this line to your `.vimrc` file:
 
     source $HOME/.dotfiles/vim/.vimrc
+
+## Neovim
+
+Neovim also great if you need move features than vim, to use the same configuration as vim just paste this in you `init.vim` file:
+
+    source $HOME/.dotfiles/vim/.vimrc
