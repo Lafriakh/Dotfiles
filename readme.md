@@ -1,4 +1,4 @@
-# Lafriakh .dotfile
+<p align="center">Lafriakh .dotfiles</p>
 
 ## Installation
 
