@@ -1,4 +1,9 @@
-<p align="center"><h1>Lafriakh .dotfiles</h1></p>
+<p align="center">
+    <svg height="150" width="250">
+        <text x="0" y="15" fill="black" font-weight="bold">Lafriakh .dotfiles</text>
+        Sorry, your browser does not support inline SVG.
+    </svg>
+</p>
 
 ## Installation
 
