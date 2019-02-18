@@ -1,5 +1,5 @@
 # Git: add, commit, push in one command.
-function rachid() {
+function gitp() {
     git add .
     
     if [ "$1" != "" ]
