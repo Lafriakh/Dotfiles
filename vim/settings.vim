@@ -266,6 +266,7 @@ augroup filetypedetect
 
   autocmd BufNewFile,BufRead *.txt setlocal noet ts=4 sw=4
   autocmd BufNewFile,BufRead *.html setlocal expandtab shiftwidth=2 tabstop=2
+  autocmd BufNewFile,BufRead *.js setlocal expandtab shiftwidth=2 tabstop=2
   autocmd BufNewFile,BufRead *.vim setlocal expandtab shiftwidth=2 tabstop=2
 
   autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=2
