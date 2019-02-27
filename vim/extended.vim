@@ -4,4 +4,4 @@
 " Colorscheme
 syntax on
 set background=light
-colorscheme lacme
+colorscheme solarized

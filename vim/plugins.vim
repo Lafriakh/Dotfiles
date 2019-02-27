@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'mattn/emmet-vim'
   Plug 'terryma/vim-multiple-cursors'
-  Plug 'ctrlpvim/ctrlp.vim'
+  " Plug 'ctrlpvim/ctrlp.vim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ervandew/supertab'
   Plug 'elzr/vim-json', {'for' : 'json'}
@@ -26,11 +26,18 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-markdown'
   Plug 'vim-scripts/nginx.vim'
    
-  Plug 'Valloric/YouCompleteMe'
   Plug 'ludovicchabant/vim-gutentags'
   Plug 'neomake/neomake'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'  
+
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
 
   """"""""""""""
   " Languages

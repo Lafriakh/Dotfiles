@@ -1,3 +1,9 @@
+# Homebrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+# export PATH:$PATH:/home/linuxbrew/.linuxbrew/bin
+# export PATH:$PATH:/home/linuxbrew/.linuxbrew/sbin
+
 # Go
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go

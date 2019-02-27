@@ -11,12 +11,21 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 """"""""""""""""""""""""""""""
-" => CTRL-P
+" => FZF
 """"""""""""""""""""""""""""""
-map <leader>l :CtrlPBuffer<cr>
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor|tmp|target|dist)|(\.(swp|ico|git|svn))$'
-let g:ctrlp_working_path_mode = 'ra'
+map <leader>l :Buffers<cr>
+
+" Start searching from the root directory.
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+command! ProjectFiles execute 'Files' s:find_git_root()
+
+map <c-p> :ProjectFiles <cr>
+
+" let g:ctrlp_max_height = 20
+" let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor|tmp|target|dist)|(\.(swp|ico|git|svn))$'
+" let g:ctrlp_working_path_mode = 'ra'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
