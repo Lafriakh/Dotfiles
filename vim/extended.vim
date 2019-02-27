@@ -2,6 +2,6 @@
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme
-syntax enable
+syntax on
 set background=light
-colorscheme solarized
+colorscheme lacme
