@@ -11,6 +11,13 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 """"""""""""""""""""""""""""""
+" => Deoplete
+""""""""""""""""""""""""""""""
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.php = ['phpcd', 'omni']
+
+""""""""""""""""""""""""""""""
 " => FZF
 """"""""""""""""""""""""""""""
 map <leader>l :Buffers<cr>
@@ -20,12 +27,9 @@ function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
+command! ProjectAg execute 'Ag' s:find_git_root()
 
 map <c-p> :ProjectFiles <cr>
-
-" let g:ctrlp_max_height = 20
-" let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor|tmp|target|dist)|(\.(swp|ico|git|svn))$'
-" let g:ctrlp_working_path_mode = 'ra'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
@@ -43,27 +47,12 @@ let g:multi_cursor_quit_key            = '<Esc>'
 """"""""""""""""""""""""""""""
 " => YouCompleteMe
 """"""""""""""""""""""""""""""
-let g:ycm_server_python_interpreter = 'python2'
-let g:ycm_autoclose_preview_window_after_completion = 1
 set completeopt-=preview
 
 """"""""""""""""""""""""""""""
-" => Neomake
+" => Bufferline
 """"""""""""""""""""""""""""""
-let g:neomake_php_phpcs_args_standard = 'PSR2'
-
-autocmd! BufEnter,BufWritePost,InsertLeave,TextChanged * Neomake
-
-""""""""""""""""""""""""""""""
-" => airline
-""""""""""""""""""""""""""""""
-" let g:airline_theme = 'acme'
-" let g:airline_powerline_fonts = 0
-" let g:airline#extensions#tabline#enabled = 1
-" " just show the filename (no path) in the tab
-" let g:airline#extensions#tabline#fnamemod = ':t'
-" " show the index for each buffer
-" " let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:bufferline_echo = 1
 
 """"""""""""""""""""""""""""""
 " => golang
@@ -126,3 +115,27 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', $HOME.'/.dotfiles/vim/UltiSnips']
+
+""""""""""""""""""""""""""""""
+" => Lightline
+""""""""""""""""""""""""""""""
+let g:lightline = {
+  \   'colorscheme': 'solarized',
+  \   'active': {
+  \     'left':[ 
+  \       [ 'mode', 'paste' ],
+  \       [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \     ]
+  \   },
+  \   'component_function': {
+  \     'gitbranch': 'fugitive#head',
+  \   }
+  \ }
+let g:lightline.tabline = {
+  \   'left': [ ['tabs'] ],
+  \   'right': [ ['close'] ]
+  \ }
+" set showtabline=2  " Show tabline
+set laststatus=2
+set guioptions-=e  " Don't use GUI tabline
+set noshowmode

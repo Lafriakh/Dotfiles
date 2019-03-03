@@ -46,7 +46,7 @@ noremap k gk
 imap jj <Esc>
 
 " Source (reload configuration)
-" nnoremap <silent> <F5> :source $MYNVIMRC<CR>
+nnoremap <silent> <F5> :source $HOME/.vimrc<CR>
 
 nnoremap <F6> :setlocal spell! spell?<CR>
 
@@ -71,18 +71,10 @@ nnoremap Y y$
 " Enter automatically into the files directory
 autocmd BufEnter * silent! lcd %:p:h
 
-" Do not show stupid q: window
-map q: :q
-
-" move line up or down
-" nnoremap <silent> <c-s-k> :m-2<CR>
-" nnoremap <silent> <c-s-j> :m+1<CR>
-" inoremap <silent> <c-s-k> <Esc>:m-2<CR>==gi
-" inoremap <silent> <c-s-j> <Esc>:m+1<CR>==gi
-
 " Move between buffers with Shift + arrow key...
 nnoremap <silent> <tab> :bnext<cr>
 nnoremap <silent> <s-tab> :bprevious<cr>
+
 " close current buffer
 nnoremap <silent> <C-w> :bd<cr>
 
@@ -94,21 +86,8 @@ inoremap <expr> <c-k> ("\<C-p>")
 noremap J 25j
 noremap K 25k
 
-" ctrlp and ctags
-nnoremap <leader>ff :CtrlPRoot<cr>
-nnoremap <leader>. :CtrlPTag<cr>
-
-" emoji
-nnoremap <leader>pe :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<cr>
-
 " exit form terminal in nvim
-tnoremap jk <C-\><C-n>
-
-
-
-" Don't move on * I'd use a function for this but Vim clobbers the last search
-" when you're in a function so fuck it, practicality beats purity.
-nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
+tnoremap j <C-\><C-n>
 
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
@@ -123,8 +102,11 @@ if !has('gui_running')
     augroup END
 endif
 
-" Show the functions in the current buffer.
-nnoremap <Leader>fu :CtrlPFunky<Cr>
+" Print the full file path.
+nnoremap <leader>pf :echo expand('%:p')<CR>
 
-" Show the opened buffers.
-nnoremap <Leader>, :CtrlPBuffer<CR>
+" Auto simicolon insertion;
+inoremap <expr> ;<cr> getline('.')[-1:] == ';' ? ';<CR>' : '<End>;<CR>'
+
+" Auto colon insertion.
+inoremap <expr> ,<cr> getline('.')[-1:] == ',' ? ',<CR>' : '<End>,<CR>'

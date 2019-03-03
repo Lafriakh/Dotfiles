@@ -12,6 +12,9 @@ export PATH=$PATH:$GOPATH/bin
 # NPM
 export PATH=$PATH:~/.npm-global/bin
 
+# Ruby
+export PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin
+
 # Composer
 export PATH=$PATH:~/.config/composer/vendor/bin
 

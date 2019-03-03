@@ -95,6 +95,9 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
+" Set the height for commands to 1
+set cmdheight=1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
