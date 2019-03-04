@@ -31,6 +31,8 @@ command! ProjectAg execute 'Ag' s:find_git_root()
 
 map <c-p> :ProjectFiles <cr>
 
+let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""' 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -48,11 +50,6 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " => YouCompleteMe
 """"""""""""""""""""""""""""""
 set completeopt-=preview
-
-""""""""""""""""""""""""""""""
-" => Bufferline
-""""""""""""""""""""""""""""""
-let g:bufferline_echo = 1
 
 """"""""""""""""""""""""""""""
 " => golang
