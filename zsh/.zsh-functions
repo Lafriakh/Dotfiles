@@ -12,6 +12,16 @@ function gitp() {
     git push
 }
 
+function gitt() {
+    
+    if [ "$1" != "" ]
+    then
+        git tag v"$1"
+    fi
+    
+    git push --tags
+}
+
 function config-reload() {
     source ~/.zshrc
 }

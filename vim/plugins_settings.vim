@@ -33,6 +33,22 @@ map <c-p> :ProjectFiles <cr>
 
 let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""' 
 
+
+let g:fzf_colors =
+      \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -56,20 +72,8 @@ set completeopt-=preview
 """"""""""""""""""""""""""""""
 let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
-
-let g:go_auto_type_info = 1
-let g:go_info_mode = 'gocode'
-
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_build_constraints = 1
 let g:go_gocode_unimported_packages = 1
-
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
 
 """"""""""""""""""""""""""""""
 " => vim json
@@ -112,27 +116,3 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', $HOME.'/.dotfiles/vim/UltiSnips']
-
-""""""""""""""""""""""""""""""
-" => Lightline
-""""""""""""""""""""""""""""""
-let g:lightline = {
-  \   'colorscheme': 'solarized',
-  \   'active': {
-  \     'left':[ 
-  \       [ 'mode', 'paste' ],
-  \       [ 'gitbranch', 'readonly', 'filename', 'modified' ]
-  \     ]
-  \   },
-  \   'component_function': {
-  \     'gitbranch': 'fugitive#head',
-  \   }
-  \ }
-let g:lightline.tabline = {
-  \   'left': [ ['tabs'] ],
-  \   'right': [ ['close'] ]
-  \ }
-" set showtabline=2  " Show tabline
-set laststatus=2
-set guioptions-=e  " Don't use GUI tabline
-set noshowmode

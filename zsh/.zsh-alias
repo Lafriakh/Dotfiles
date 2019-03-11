@@ -2,6 +2,7 @@
 alias ga="git add ."
 alias gs="git status"
 alias gc="git commit -m"
+alias gt="git for-each-ref --sort=creatordate --format='%(refname:lstrip=2) - %(contents:subject)' refs/tags"
 
 # General
 alias time="/usr/bin/time -p"

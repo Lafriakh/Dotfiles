@@ -16,7 +16,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'easymotion/vim-easymotion'
   Plug 'tpope/vim-markdown'
   Plug 'vim-scripts/nginx.vim'
-  Plug 'itchyny/lightline.vim'
   Plug 'ludovicchabant/vim-gutentags'
   Plug 'vim-syntastic/syntastic'
   Plug 'Valloric/YouCompleteMe'
@@ -25,6 +24,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'baverman/vial'
   Plug 'baverman/vial-http'
   Plug 'bling/vim-bufferline'
+  Plug 'cespare/vim-toml'
 
   """"""""""""""
   " Languages
@@ -38,13 +38,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'jwalton512/vim-blade'
    
   " Color
-  Plug 'sickill/vim-monokai'
-  " Plug 'fatih/molokai'
-  " Plug 'morhetz/gruvbox'
-  Plug 'altercation/vim-colors-solarized'
-  " Plug 'reedes/vim-colors-pencil'
-  " Plug 'olivertaylor/vacme'
-  " Plug 'igungor/schellar'
-  " Plug 'plan9-for-vimspace/acme-colors'
-  " Plug 'robertmeta/nofrils'
+  Plug 'lafriakh/black-white.vim'
 call plug#end()
