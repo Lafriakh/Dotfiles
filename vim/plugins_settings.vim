@@ -9,6 +9,7 @@ let NERDTreeQuitOnOpen=1
 let g:NERDTreeNodeDelimiter = "\u00a0"
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeIgnore = ['^node_modules$']
 
 """"""""""""""""""""""""""""""
 " => Deoplete
@@ -16,6 +17,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 let g:deoplete#ignore_sources.php = ['phpcd', 'omni']
+let g:deoplete#sources#go#unimported_packages = 1
 
 """"""""""""""""""""""""""""""
 " => FZF
@@ -73,7 +75,12 @@ set completeopt-=preview
 let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
 let g:go_gocode_unimported_packages = 1
+" let g:go_def_mode= "godef"
+let g:go_def_mode = "gopls"
+let g:go_metalinter_command = "golangci-lint run"
+let g:go_fmt_experimental = 1
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
+autocmd FileType go nmap <C-S-o> <Plug>(go-decls)
 
 """"""""""""""""""""""""""""""
 " => vim json

@@ -149,6 +149,9 @@ set si "Smart indent
 " set wrap "Wrap lines
 set nowrap " no wrap liles
 
+" We want to fold lines manually :)
+set foldmethod=manual
+
 """"""""""""""""""""""""""""""
 " => ctags
 """"""""""""""""""""""""""""""
@@ -191,4 +194,9 @@ augroup filetypedetect
 
   " fix vue scroll syntax issue
   autocmd FileType vue syntax sync fromstart
+augroup END
+
+augroup saveFolds
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent loadview 
 augroup END
