@@ -127,6 +127,9 @@ set noswapfile
 set clipboard^=unnamed
 set clipboard^=unnamedplus
 
+" increase max memory to show syntax highlighting for large files
+set maxmempattern=20000
+
 " toggle paste mode
 set pastetoggle=<F3>
 
