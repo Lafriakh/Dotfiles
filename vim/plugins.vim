@@ -23,13 +23,6 @@ call plug#begin('~/.vim/plugged')
   " Plug 'bling/vim-bufferline'
   Plug 'cespare/vim-toml'
   Plug 'w0rp/ale'
-  " if has('nvim')
-  "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  " else
-  "   Plug 'Shougo/deoplete.nvim'
-  "   Plug 'roxma/nvim-yarp'
-  "   Plug 'roxma/vim-hug-neovim-rpc'
-  " endif
   Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
   """"""""""""""
@@ -46,4 +39,5 @@ call plug#begin('~/.vim/plugged')
    
   " Color
   Plug 'lafriakh/black-white.vim'
+  Plug 'morhetz/gruvbox'
 call plug#end()
