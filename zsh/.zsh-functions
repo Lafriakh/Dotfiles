@@ -22,6 +22,32 @@ function gitt() {
     git push --tags
 }
 
+function pushme {
+  br=`git branch | grep "*"`
+
+  git add --all
+
+  if (($# > 1)); then
+
+    params=''
+    for i in $*;
+    do
+        params=" $params $i"
+    done
+
+    git commit -m "$params"
+  else
+    git commit -m "$1"
+  fi
+
+  if git push origin ${br/* /}
+  then
+    echo "success"
+  else
+    osascript -e 'tell app "System Events" to display dialog "PUSH FAILED!"'
+  fi
+}
+
 function config-reload() {
     source ~/.zshrc
 }

@@ -121,11 +121,9 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" copy to system clipboard
-set clipboard=unnamedplus
 "http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
-" set clipboard^=unnamed
-" set clipboard^=unnamedplus
+set clipboard^=unnamed
+set clipboard^=unnamedplus
 
 " increase max memory to show syntax highlighting for large files
 set maxmempattern=20000
