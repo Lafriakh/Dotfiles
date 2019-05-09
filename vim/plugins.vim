@@ -24,7 +24,9 @@ call plug#begin('~/.vim/plugged')
   """"""""""""""
   " go
   Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-   
+  " php
+  Plug 'stephpy/vim-php-cs-fixer'
+
   " Color
   Plug 'lafriakh/black-white.vim'
   Plug 'morhetz/gruvbox'

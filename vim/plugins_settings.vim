@@ -14,10 +14,10 @@ let g:NERDTreeIgnore = ['^node_modules$']
 """"""""""""""""""""""""""""""
 " => Deoplete
 """"""""""""""""""""""""""""""
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-let g:deoplete#ignore_sources.php = ['phpcd', 'omni']
-let g:deoplete#sources#go#unimported_packages = 1
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+" let g:deoplete#ignore_sources.php = ['phpcd', 'omni']
+" let g:deoplete#sources#go#unimported_packages = 1
 
 """"""""""""""""""""""""""""""
 " => FZF
@@ -85,8 +85,8 @@ let g:vim_json_syntax_conceal = 0
 """"""""""""""""""""""""""""""
 " => vim php-cs-fixer
 """"""""""""""""""""""""""""""
-" let g:php_cs_fixer_rules = "@PSR2"
-" autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+let g:php_cs_fixer_rules = "@PSR2"
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
 """"""""""""""""""""""""""""""
 " => Gutentags
