@@ -85,8 +85,9 @@ let g:vim_json_syntax_conceal = 0
 """"""""""""""""""""""""""""""
 " => vim php-cs-fixer
 """"""""""""""""""""""""""""""
-let g:php_cs_fixer_rules = "@PSR2"
-autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+" let g:php_cs_fixer_rules = "@PSR2"
+let g:php_cs_fixer_cache = ""
+" autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
 """"""""""""""""""""""""""""""
 " => Gutentags
