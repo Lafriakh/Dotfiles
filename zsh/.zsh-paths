@@ -9,6 +9,9 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin
 
+# Flutter
+export PATH=$PATH:~/flutter/bin
+
 # NPM
 export PATH=$PATH:~/.npm-global/bin
 
