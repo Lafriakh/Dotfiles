@@ -82,7 +82,7 @@ let g:vim_json_syntax_conceal = 0
 """"""""""""""""""""""""""""""
 " => vim php-cs-fixer
 """"""""""""""""""""""""""""""
-" let g:php_cs_fixer_rules = "@PSR2"
+let g:php_cs_fixer_rules = "@PSR2"
 let g:php_cs_fixer_cache = ""
 nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
 " autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
@@ -104,6 +104,7 @@ let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
 " install this package first: `sudo apt install ack-grep`
 if executable('ag')
     let g:ackprg = 'ag --vimgrep --smart-case'
+    let g:ag_working_path_mode="r"
 endif
 
 """"""""""""""""""""""""""""""
