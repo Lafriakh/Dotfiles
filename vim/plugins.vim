@@ -18,7 +18,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'  
   Plug 'w0rp/ale'
   Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-
   """"""""""""""
   " Languages
   """"""""""""""
@@ -26,8 +25,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
   " php
   Plug 'stephpy/vim-php-cs-fixer'
+  Plug 'StanAngeloff/php.vim'
 
   " Color
   Plug 'lafriakh/black-white.vim'
   Plug 'morhetz/gruvbox'
+  Plug 'tomasr/molokai'
+  Plug 'john2x/flatui.vim'
 call plug#end()

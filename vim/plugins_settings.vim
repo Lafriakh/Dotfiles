@@ -12,16 +12,9 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeIgnore = ['^node_modules$']
 
 """"""""""""""""""""""""""""""
-" => Deoplete
-""""""""""""""""""""""""""""""
-" let g:deoplete#enable_at_startup = 1
-" let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-" let g:deoplete#ignore_sources.php = ['phpcd', 'omni']
-" let g:deoplete#sources#go#unimported_packages = 1
-
-""""""""""""""""""""""""""""""
 " => FZF
 """"""""""""""""""""""""""""""
+let g:fzf_layout = { 'down': '~20%' }
 map <leader>l :Buffers<cr>
 
 " Start searching from the root directory.
@@ -29,15 +22,17 @@ function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
-command! ProjectAg execute 'Ag' s:find_git_root()
+command! -nargs=1 Ag execute "Ack! <args> " s:find_git_root()
 
+" search
 map <c-p> :ProjectFiles <cr>
+imap <C-p> <esc>:<C-u>FzfHistory<cr>
 
 let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""' 
 
 
 let g:fzf_colors =
-      \ { 'fg':      ['fg', 'Normal'],
+      \ {'fg':     ['fg', 'Normal'],
       \ 'bg':      ['bg', 'Normal'],
       \ 'hl':      ['fg', 'Comment'],
       \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
@@ -56,13 +51,13 @@ let g:fzf_colors =
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_start_word_key      = '<C-f>'
-let g:multi_cursor_select_all_word_key = '<A-n>'
-let g:multi_cursor_start_key           = 'g<C-n>'
-let g:multi_cursor_select_all_key      = 'g<A-n>'
-let g:multi_cursor_next_key            = '<C-n>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
+" let g:multi_cursor_select_all_word_key = '<A-n>'
+" let g:multi_cursor_start_key           = 'g<C-n>'
+" let g:multi_cursor_select_all_key      = 'g<A-n>'
+" let g:multi_cursor_next_key            = '<C-n>'
+" let g:multi_cursor_prev_key            = '<C-p>'
+" let g:multi_cursor_skip_key            = '<C-x>'
+" let g:multi_cursor_quit_key            = '<Esc>'
 
 """"""""""""""""""""""""""""""
 " => golang
@@ -73,6 +68,22 @@ let g:go_gocode_unimported_packages = 1
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap <C-S-o> <Plug>(go-decls)
 au BufRead,BufNewFile *.go.html set filetype=gohtmltmpl
+
+""""""""""""""""""""""""""""""
+" => php.vim
+""""""""""""""""""""""""""""""
+" Put this function at the very end of your vimrc file.
+function! PhpSyntaxOverride()
+  " Put snippet overrides in this function.
+  hi! link phpDocTags phpDefine
+  hi! link phpDocParam phpType
+  hi! link phpDocNamespaceSeparator phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
 
 """"""""""""""""""""""""""""""
 " => vim json
@@ -104,7 +115,7 @@ let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
 " install this package first: `sudo apt install ack-grep`
 if executable('ag')
     let g:ackprg = 'ag --vimgrep --smart-case'
-    let g:ag_working_path_mode="r"
+    " let g:ag_working_path_mode="r"
 endif
 
 """"""""""""""""""""""""""""""
