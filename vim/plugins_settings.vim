@@ -22,7 +22,8 @@ function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
-command! -nargs=1 Ag execute "Ack! <args> " s:find_git_root()
+command! -nargs=1 Ag
+      \ call fzf#vim#ag(<q-args>, {'dir': s:find_git_root(), 'down': '40%'})
 
 " search
 map <c-p> :ProjectFiles <cr>
