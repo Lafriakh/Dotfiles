@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mileszs/ack.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'ludovicchabant/vim-gutentags'
+  Plug 'elzr/vim-json', {'for' : 'json'}
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'  
   Plug 'w0rp/ale'
