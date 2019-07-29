@@ -23,6 +23,7 @@ set number                   " Show line numbers
 set showcmd                  " Show me what I'm typing
 set noswapfile               " Don't use swapfile
 set nobackup                 " Don't create annoying backup files
+set nowrap                   " Don't break lines
 set splitright               " Split vertical windows right to the current windows
 set splitbelow               " Split horizontal windows below to the current windows
 set autowrite                " Automatically save before :next, :make etc.
