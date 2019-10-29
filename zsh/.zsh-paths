@@ -1,5 +1,5 @@
 # Homebrew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # export PATH:$PATH:/home/linuxbrew/.linuxbrew/bin
 # export PATH:$PATH:/home/linuxbrew/.linuxbrew/sbin
@@ -16,7 +16,7 @@ export PATH=$PATH:~/flutter/bin
 export PATH=$PATH:~/.npm-global/bin
 
 # Yarn
-export PATH="$PATH:`yarn global bin`"
+# export PATH="$PATH:`yarn global bin`"
 
 # Ruby
 export PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin
