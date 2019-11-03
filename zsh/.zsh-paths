@@ -26,3 +26,8 @@ export PATH=$PATH:~/.config/composer/vendor/bin
 
 # Laravel Spark
 export PATH=$PATH:~/.spark-installer
+
+# Proxy
+# export HTTP_PROXY=http://localhost:8888
+# export HTTPS_PROXY=https://localhost:8888
+#

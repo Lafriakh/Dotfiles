@@ -89,6 +89,9 @@ augroup filetypedetect
 
   " fix vue scroll syntax issue
   autocmd FileType vue syntax sync fromstart
+
+  " Svelte
+  au BufRead,BufNewFile *.svelte set filetype=svelte
 augroup END
 
 augroup saveFolds

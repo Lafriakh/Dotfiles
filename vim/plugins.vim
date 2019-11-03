@@ -29,6 +29,8 @@ call plug#begin('~/.vim/plugged')
   " php
   Plug 'stephpy/vim-php-cs-fixer'
   Plug 'StanAngeloff/php.vim'
+  " javascript
+  Plug 'burner/vim-svelte'
 
   " Color
   Plug 'lafriakh/black-white.vim'
