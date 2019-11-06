@@ -37,4 +37,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'morhetz/gruvbox'
   Plug 'tomasr/molokai'
   Plug 'john2x/flatui.vim'
+  Plug 'nanotech/jellybeans.vim'
 call plug#end()
