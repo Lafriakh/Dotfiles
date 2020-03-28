@@ -1,8 +1,8 @@
 # Homebrew
-# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-# export PATH:$PATH:/home/linuxbrew/.linuxbrew/bin
-# export PATH:$PATH:/home/linuxbrew/.linuxbrew/sbin
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/sbin
 
 # Go
 export PATH=$PATH:/usr/local/go/bin
@@ -26,6 +26,11 @@ export PATH=$PATH:~/.config/composer/vendor/bin
 
 # Laravel Spark
 export PATH=$PATH:~/.spark-installer
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Proxy
 # export HTTP_PROXY=http://localhost:8888
