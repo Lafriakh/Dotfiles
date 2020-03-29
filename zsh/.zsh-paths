@@ -9,6 +9,9 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Flutter
 export PATH=$PATH:~/flutter/bin
 
