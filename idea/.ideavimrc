@@ -10,4 +10,5 @@ nmap <leader><leader>w :action KJumpAction.Word0<cr>
 nmap <leader><leader>l :action KJumpAction.Line<cr>
 
 nmap <leader>c :q<cr>
-imap jj <esc><cr>
+imap jj <esc>
+
