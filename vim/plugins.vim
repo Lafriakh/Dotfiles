@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'StanAngeloff/php.vim'
   " javascript
   Plug 'burner/vim-svelte'
+  Plug 'udalov/kotlin-vim'
 
   " Color
   Plug 'lafriakh/black-white.vim'
