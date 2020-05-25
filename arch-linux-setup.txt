@@ -10,3 +10,4 @@ Packages:
  - pacman-contrib
  - feh
  - nitrogen
+ - lxappearance

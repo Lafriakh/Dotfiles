@@ -9,6 +9,7 @@ alias gb="git show-branch --list"
 alias time="/usr/bin/time -p"
 alias ll="ls -l --group-directories-first --color=auto"
 alias ls="ls --group-directories-first --color=auto"
+alias vim="nvim"
 
 # Arch Linux
 alias pacman="sudo pacman"
